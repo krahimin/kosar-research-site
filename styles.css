@@ -262,3 +262,13 @@ main>.section{width:calc(100% - 40px);max-width:1100px;margin-left:auto;margin-r
 /* Experimental methods occupy a full row beneath the computational skill cards. */
 .experimental-skills{grid-column:1 / -1}
 .experimental-skills .skill-line{margin-bottom:0}
+
+/* Reveal every introduction line together, keeping the completed text visible. */
+.hero-landscape .home-lines{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:32px;max-width:630px}
+.hero-landscape .home-line{max-width:100%;margin:0;padding:11px 20px;border-radius:24px;background:#f0c09e;color:#283b43;font-size:14px;font-weight:800;line-height:1.7;text-shadow:none;box-shadow:0 6px 20px #10233120}
+.home-line [aria-hidden] span{animation:home-letter-reveal 100ms linear var(--reveal-delay) both}
+@keyframes home-letter-reveal{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.home-line [aria-hidden] span{animation:none}}
+
+/* Emphasize the main navigation labels on desktop and mobile. */
+#navigation a{font-weight:700}

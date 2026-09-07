@@ -9,6 +9,13 @@ window.SITE_CONTENT = {
   "profile": {
     "name": "Kosar Rahimi",
     "title": "Ph.D. Candidate in Chemical Engineering, University of Houston",
+    "homeLines": [
+      "Scientist",
+      "Chemical engineer by training",
+      "Computational biophysicist by practice",
+      "Former Bristol Myers Squibb drug development intern",
+      "Bioengineering experience"
+    ],
     "bio": "I simulate unseen biomolecular states and use those insights to guide protein design.",
     "image": "assets/images/profile/profile.jpeg",
     "imageAlt": "Portrait of Kosar Rahimi",
