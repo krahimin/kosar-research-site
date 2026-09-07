@@ -111,6 +111,32 @@ window.SITE_CONTENT = {
     "Software and Languages": [
       "Linux/HPC, GPU Computing, GROMACS, PLUMED, AMBER, Schrödinger Maestro, Python (NumPy, Pandas, SciPy, scikit-learn, TensorFlow/Keras, MDAnalysis), MATLAB, VMD, PyMOL, COMSOL, Tableau, ParaView, Altair DEM"
     ],
+    "Experimental Skills": [
+      {
+        "label": "Protein purification",
+        "href": "#masters-project"
+      },
+      {
+        "label": "injectable in-situ gelling systems",
+        "href": "#masters-project"
+      },
+      {
+        "label": "hydrogel rheological characterization",
+        "href": "#masters-project"
+      },
+      {
+        "label": "gelation kinetics",
+        "href": "#masters-project"
+      },
+      {
+        "label": "UV–Vis spectroscopy (drug concentration and release)",
+        "href": "#masters-project"
+      },
+      {
+        "label": "Brookfield Shear Cell and FT4 Powder Rheometer (powder-flow characterization)",
+        "href": "#bms-internship"
+      }
+    ],
     "frameworksExposure": "Frameworks/areas of exposure: TensorFlow/Keras; transformers, Hugging Face, and PyTorch"
   },
   "work": [
