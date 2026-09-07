@@ -167,3 +167,66 @@ nav a{font-size:15px;font-weight:600}
 .role-organization{display:flex;align-items:center;gap:10px}
 .organization-logo{width:40px;height:40px;object-fit:contain;flex-shrink:0}
 @media(max-width:700px){.leadership-group{grid-template-columns:1fr;gap:24px}}
+
+/* A warmer research portfolio, with distinct section accents. */
+:root{--ink:#243c48;--text:#42525c;--muted:#63737b;--accent:#176d70;--line:#dce6e5;--wash:#f0f6f5}
+html{scroll-behavior:smooth}
+body{color:var(--text);background:#fffdfa}
+.site-header{position:sticky;top:0;z-index:20;max-width:none;background:rgba(255,253,250,.94);backdrop-filter:blur(16px);box-shadow:0 3px 20px rgba(36,60,72,.04)}
+nav{justify-content:center}
+nav a{position:relative}
+nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;border-radius:2px;background:linear-gradient(90deg,#168084,#c66c51);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+nav a:hover,nav a[aria-current]{color:var(--accent);text-decoration:none}
+nav a:hover::after,nav a[aria-current]::after{transform:scaleX(1)}
+.hero{position:relative;isolation:isolate}
+.hero::before{content:'';position:absolute;z-index:-1;inset:20px -22px;background:radial-gradient(ellipse at 85% 35%,#d7eeea 0,transparent 56%),radial-gradient(ellipse at 12% 80%,#f9e6d9 0,transparent 58%);border-radius:32px;pointer-events:none}
+.hero-copy{padding-left:18px}
+.hero h1{color:#235964}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#965137}
+.hero .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:#bd694f;box-shadow:0 0 0 5px #bd694f15}
+.hero-title{color:#38676d}
+.hero .portrait{width:calc(100% - 18px);border:8px solid #fffdfa;border-radius:100px 20px 100px 20px;box-shadow:15px 16px 0 #b8d9d2,0 24px 48px #23596418;transform:rotate(2deg)}
+.hero .portrait img{transform:rotate(-2deg) scale(1.04);object-fit:cover}
+.socials{gap:10px}
+.social-link{padding:5px 11px;background:#ffffffb8;border:1px solid #c8ddda;border-radius:20px;font-size:14px;transition:background .2s,transform .2s}
+.social-link:hover{background:#e1f0ec;text-decoration:none;transform:translateY(-2px)}
+.explore{align-items:center;gap:22px;background:#22676c;color:white;padding:11px 20px;border-radius:24px;box-shadow:0 6px 18px #22676c20;transition:background .2s,transform .2s}
+.explore:hover{background:#194e53;color:white;text-decoration:none;transform:translateY(-2px)}
+.section{--section-color:#176d70;--section-tint:#eaf4f1;border-radius:20px;margin-bottom:20px;border-top:0;position:relative}
+#work,#awards{--section-color:#985030;--section-tint:#fbefe5}
+#education,#leadership{--section-color:#69518d;--section-tint:#f1edf8}
+#skills,#beyond{--section-color:#2b6b64;--section-tint:#e9f3ed}
+.section:nth-of-type(n){background:linear-gradient(135deg,var(--section-tint),#fffdfa 65%)}
+.section-heading h2{color:var(--section-color)}
+.section-heading{gap:18px}
+.section-number{width:40px;height:40px;border:0;border-radius:13px;background:var(--section-color);color:white;font-weight:600;box-shadow:0 5px 12px #243c4810}
+.section-heading::after{content:'';height:1px;flex:1;background:var(--line);margin-left:8px}
+.subsection>h3{display:flex;align-items:center;gap:10px}
+.subsection>h3::before{content:'';width:5px;height:20px;border-radius:4px;background:var(--section-color);flex-shrink:0}
+.button{border-radius:18px;border-color:#bfd8d4;background:#edf6f3;color:#245e5b;gap:12px}
+.button:hover{background:#d8ece6;border-color:#84b5a7;color:#194c47;box-shadow:0 4px 12px #245e5b10}
+.project .eyebrow{color:var(--section-color)}
+.ongoing{background:#eaf3f080;border-color:#78b3a1;border-radius:0 10px 10px 0;padding:12px 16px}
+.research-project .project-figure,.work-visual .media{border-radius:14px;box-shadow:0 8px 25px #243c480b}
+.side-card{background:#fffefa;border-radius:16px;border-top:3px solid #368b86;box-shadow:0 5px 20px #243c4806}
+.side-card:nth-child(even){border-top-color:#9672af}
+.training-entry{background:transparent}
+.training-visual{border-radius:12px}
+.skills-grid>div{min-width:0;padding:24px;border:1px solid #d4e5dd;border-radius:16px;background:#ffffffb3}
+.skill-link{white-space:normal}
+.memory-card,.personal-card{border-radius:14px;box-shadow:0 5px 18px #243c4810}
+.personal-overlay{background:linear-gradient(180deg,#173d4540,#173d45f2);transition:opacity .25s ease}
+.organization-link{text-decoration:underline;text-decoration-color:#b3a4c9;text-underline-offset:4px}
+footer{border-top:2px solid #c8ddd6}
+@keyframes portfolio-enter{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:no-preference){.hero-copy,.hero .portrait{animation:portfolio-enter .7s ease both}.hero .portrait{animation-delay:.12s}}
+@media(max-width:1100px){.site-header{padding-top:12px;padding-bottom:12px}nav{justify-content:flex-start}}
+@media(max-width:700px){
+ .hero-copy{padding-left:0}.hero::before{inset:12px -12px;border-radius:22px}
+ .hero .portrait{width:calc(100% - 28px);max-width:340px;border-radius:75px 18px 75px 18px;box-shadow:10px 12px 0 #b8d9d2,0 18px 30px #23596412;margin-bottom:16px}
+ .section{padding-left:12px;padding-right:12px;margin-left:-12px;margin-right:-12px;border-radius:16px}
+ .section-heading{gap:12px}.section-heading::after{display:none}.section-number{width:34px;height:34px;border-radius:11px}
+ .skills-grid>div{padding:18px}.social-link{font-size:13px}.skill-choice>div{max-width:calc(100vw - 70px)}
+ .social-link:hover,.explore:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-copy,.hero .portrait{animation:none}}
