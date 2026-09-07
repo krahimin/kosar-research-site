@@ -506,6 +506,7 @@ window.SITE_CONTENT = {
         "title": "Mental Health Chair",
         "organization": "Chemical Engineering Student Safety Team (ChESST)",
         "logo": "assets/images/outreach/chesst.png",
+        "organizationUrl": "https://chesst.chee.uh.edu/",
         "dates": "Jun 2024 – Jun 2025",
         "description": "Supported graduate-student well-being by presenting mental-health resources during orientations and contributing educational content to the ChESST safety newsletter.",
         "linkedin": ""
@@ -514,6 +515,7 @@ window.SITE_CONTENT = {
         "title": "First-Year Representative",
         "organization": "Organization of Chemical Engineering Graduate Students (OChEGS)",
         "logo": "assets/images/outreach/ochegs.png",
+        "organizationUrl": "https://ochegs.chee.uh.edu/",
         "dates": "Jun 2023 – Dec 2023",
         "description": "Helped welcome new graduate students and organized academic, professional, and social events, including seminars, career activities, and the department research symposium.",
         "linkedin": "https://www.linkedin.com/posts/kosar-rahimi_chemicalengineersinpharma-nextgenerationchemicalengineers-activity-7121685742300401664-yJKf?utm_source=share&utm_medium=member_desktop&rcm=ACoAABpa-k0BAGaCPnSa9HFmOJeqNo8iiRF6wwo"
