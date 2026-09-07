@@ -505,6 +505,7 @@ window.SITE_CONTENT = {
       {
         "title": "Mental Health Chair",
         "organization": "Chemical Engineering Student Safety Team (ChESST)",
+        "logo": "assets/images/outreach/chesst.png",
         "dates": "Jun 2024 – Jun 2025",
         "description": "Supported graduate-student well-being by presenting mental-health resources during orientations and contributing educational content to the ChESST safety newsletter.",
         "linkedin": ""
@@ -512,6 +513,7 @@ window.SITE_CONTENT = {
       {
         "title": "First-Year Representative",
         "organization": "Organization of Chemical Engineering Graduate Students (OChEGS)",
+        "logo": "assets/images/outreach/ochegs.png",
         "dates": "Jun 2023 – Dec 2023",
         "description": "Helped welcome new graduate students and organized academic, professional, and social events, including seminars, career activities, and the department research symposium.",
         "linkedin": "https://www.linkedin.com/posts/kosar-rahimi_chemicalengineersinpharma-nextgenerationchemicalengineers-activity-7121685742300401664-yJKf?utm_source=share&utm_medium=member_desktop&rcm=ACoAABpa-k0BAGaCPnSa9HFmOJeqNo8iiRF6wwo"
@@ -630,11 +632,6 @@ window.SITE_CONTENT = {
       "image": "assets/images/conferences/AIChE- Boston-2025.jpg",
       "imageAlt": "AIChE 2025 — Boston",
       "caption": "AIChE 2025 — Boston"
-    },
-    {
-      "image": "assets/images/conferences/BPS 2026 San Francisco.jpg",
-      "imageAlt": "BPS 2026 — San Francisco",
-      "caption": "BPS 2026 — San Francisco"
     }
   ],
   "awardGallery": [
@@ -668,11 +665,13 @@ window.SITE_CONTENT = {
     {
       "image": "assets/images/outreach/Moleculary dynamics workshop.JPG",
       "imageAlt": "Molecular dynamics workshop",
+      "group": "STEM Outreach",
       "caption": "Molecular Dynamics Workshop"
     },
     {
       "image": "assets/images/outreach/Ochegs symposium.jpeg",
       "imageAlt": "OChEGS symposium",
+      "group": "Leadership",
       "caption": "OChEGS Symposium"
     }
   ],
