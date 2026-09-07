@@ -230,3 +230,31 @@ footer{border-top:2px solid #c8ddd6}
  .social-link:hover,.explore:hover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-copy,.hero .portrait{animation:none}}
+
+/* Local preview: an immersive landscape photograph for the home section. */
+main{max-width:none;padding:0}
+main>.section{width:calc(100% - 40px);max-width:1100px;margin-left:auto;margin-right:auto}
+.hero.hero-landscape{display:flex;align-items:center;min-height:calc(100svh - 80px);padding:90px max(7vw,24px);margin-bottom:28px;background:#294655;overflow:hidden}
+.hero-landscape .hero-background{position:absolute;inset:0;z-index:-2;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 58%}
+.hero.hero-landscape::before{inset:0;border-radius:0;background:linear-gradient(90deg,rgba(12,28,40,.76),rgba(12,28,40,.4) 48%,rgba(12,28,40,.04) 78%);z-index:-1}
+.hero-landscape .hero-copy{max-width:630px;padding:0;text-shadow:0 2px 12px #10233155}
+.hero-landscape h1{font-size:clamp(54px,6.3vw,90px);color:white;letter-spacing:-2px;margin-bottom:24px}
+.hero-landscape .eyebrow{color:#ffe1cb;letter-spacing:3px}
+.hero-landscape .eyebrow::before{background:#edb48b;box-shadow:0 0 0 5px #edb48b25}
+.hero-landscape .hero-title{color:#fff;max-width:510px;font-size:22px;line-height:1.6}
+.hero-landscape .bio{color:#f6f4ef;max-width:470px;font-size:18px;line-height:1.8}
+.hero-landscape .socials{margin-top:28px}
+.hero-landscape .social-link{color:white;background:#10233150;border-color:#ffffff70;text-shadow:none;backdrop-filter:blur(5px)}
+.hero-landscape .social-link:hover{background:#ffffff24;border-color:white}
+.hero-landscape .explore{background:#f0c09e;color:#283b43;font-size:14px;font-weight:600;text-shadow:none;margin-top:32px;box-shadow:0 6px 20px #10233120}
+.hero-landscape .explore:hover{background:#ffdabd;color:#172c36}
+@media(max-width:1100px){.hero.hero-landscape{min-height:calc(100svh - 60px);padding:70px 6vw}.hero-landscape .hero-copy{max-width:55%}.hero-landscape .hero-title{font-size:19px}}
+@media(max-width:700px){
+ main>.section{width:calc(100% - 22px)}
+ .hero.hero-landscape{align-items:flex-start;min-height:860px;min-height:max(860px,calc(100svh - 60px));padding:48px 25px 340px}
+ .hero-landscape .hero-background{object-position:right center}
+ .hero.hero-landscape::before{background:linear-gradient(180deg,rgba(12,28,40,.82),rgba(12,28,40,.65) 44%,rgba(12,28,40,.08) 76%)}
+ .hero-landscape .hero-copy{max-width:100%}.hero-landscape h1{font-size:clamp(45px,11.5vw,64px);letter-spacing:-1.5px}
+ .hero-landscape .eyebrow{font-size:10px}.hero-landscape .hero-title{font-size:18px}.hero-landscape .bio{font-size:16px}
+ .hero-landscape .socials{gap:8px;margin-top:22px}.hero-landscape .explore{margin-top:24px}
+}

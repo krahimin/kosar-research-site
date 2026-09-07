@@ -675,6 +675,12 @@ window.SITE_CONTENT = {
       "imageAlt": "OChEGS symposium",
       "group": "Leadership",
       "caption": "OChEGS Symposium"
+    },
+    {
+      "image": "assets/images/outreach/AIche- UH booth-graduate fair.JPG",
+      "imageAlt": "University of Houston booth at the AIChE 2024 Graduate Fair",
+      "group": "Leadership",
+      "caption": "AIChE 2024 Graduate Fair"
     }
   ],
   "certificateGallery": [
