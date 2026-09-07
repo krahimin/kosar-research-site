@@ -6,31 +6,36 @@ A dependency-free, responsive personal academic website. Open `index.html` direc
 
 Edit **content.js**. Text is plain text, safely rendered; do not enter HTML. All supplied titles and dates are included. Unprovided content is empty or explicitly marked as a placeholder. No scientific descriptions, awards, publications, or qualifications have been inferred.
 
-- Profile: add `bio` and social URLs. Email uses `mailto:your-address`. Unconfigured social names are noninteractive placeholders.
-- Projects: add 1–4 strings to `bullets` (no fixed count). `ongoing: []` shows an editable-content placeholder; add 1–3 strings, or set `ongoing: null` to remove the subsection completely.
+- Profile: add `bio` and social URLs. Email uses `mailto:your-address`. Google Scholar uses the supplied profile URL.
+- Projects: add 1–4 strings to `bullets` (no fixed count). `ongoing: []` or `null` hides the subsection; add 1–3 strings to display it. Empty bullets are hidden.
 - `paper`, `poster`, `conference`, `github`, and certificate `url` values are optional. Empty values hide buttons. Use full https:// URLs externally; use `assets/posters/filename.pdf` for local posters. Links open new tabs. Only set PDF paths once those files exist.
-- Overview: add the text and image; `poster: ''` hides its optional button.
-- Optional figures/photos: use `image: null` to omit them; provide a path to show them. Add descriptive `imageAlt` text. Project 4 and the master’s project automatically become two-column layouts when a figure is added.
-- Degrees: add dates, optional descriptions, and optional `researchTitle` for Ph.D./M.Sc.
+- Graduate Research Assistant overview: edit `work[0].overview` and `bullets`. The broad overview lives in Work Experience, separate from the individual Ph.D. projects. `groupUrl` links to GHZ Lab. `poster: 'assets/work/phd.pdf'` shows “View Research Poster”; an empty string hides it. The PDF is never embedded.
+- Optional figures/photos: use `image: null` to omit them; provide a path to show them. Add descriptive `imageAlt` text. All five Ph.D. projects and the master’s project share a two-column figure layout, stacked on mobile. Missing or unconfigured project images are hidden, with text using the available width. Figures use a consistent frame with no cropping or distortion.
+- Degrees: edit `dates`, optional descriptions, and `researchTitle` / `researchLabel`. An empty title hides the entire thesis/dissertation line, including its label. The Ph.D. uses 2021 – Present with no expected end date.
 - Certificates, side projects, conferences and awards: replace blank template entries with your own facts. Copy objects to add entries; use `[]` to remove entries. Example training courses from the brief are not represented as earned credentials.
-- Conferences: `photo` and `thumbnail` are independently optional. Use `poster` for the PDF and `url` for a conference link.
-- Awards sort in reverse chronological order by numeric year; unknown years appear last.
-- Work and leadership entries accept additional objects, optional dates and photos. Personal captions are optional.
+- Conferences: edit the three category arrays; entries support `year`, `name`, `location`, `title`, optional `note`, `poster`, and `url`. Photos are intentionally not attached to entries.
+- Awards sort newest first by numeric year. Optional `institution`, `description`, and `linkedin` fields disappear when empty. Only supplied LinkedIn URLs are configured; the Welch award uses the supplied LinkedIn post.
+- Independent galleries: `conferenceGallery` and `awardGallery` list `{ image, imageAlt }` objects. All configured conference and award images display. Galleries remain separate from individual list entries. Conference and award images support an optional `caption`, shown over the photo on hover/keyboard focus and always visible on touch/mobile. Current captions use the supplied filenames. Reorder or replace items to change the selection; `[]` removes the gallery and lets the list use the available width. Use browser-compatible JPG/PNG/WebP files, not HEIC.
+- Work and leadership entries accept additional objects, optional dates and photos. Work entries independently support optional `image` (`null` omits it), `bullets` (`[]` omits the list without a placeholder), and `linkedin` (empty hides the button; a full URL shows “LinkedIn Post” opening in a new tab). Personal captions are optional.
 
 ## Assets
 
-Directories are tracked with `.gitkeep` files. Missing images show a neutral CSS placeholder, never a broken-image icon. These placeholders are deliberately not fabricated portraits or scientific figures. Add your files at the paths already configured:
+Directories are tracked with `.gitkeep` files. Missing images are removed completely; no broken-image placeholders are shown. Add your files at the paths already configured:
 
 ```
-assets/images/profile/kosar-profile.jpg
-assets/images/projects/phd-overview.jpg
-assets/images/projects/rna-folding.jpg
-assets/images/projects/protein-rna.jpg
-assets/images/projects/multidomain-protein.jpg
-assets/images/work/bms.jpg
-assets/images/personal/marathon.jpg
-assets/images/personal/daf.jpg
-assets/images/personal/hiking.jpg
+assets/images/profile/profile.jpeg
+assets/images/projects/MM-OPES.png
+assets/images/projects/RRM-RGG.png
+assets/images/projects/FUS-RNA.png
+assets/images/projects/multidomains.png
+assets/images/projects/Myc.png
+assets/images/projects/master.png
+assets/work/BMS.png
+assets/work/phd.pdf
+assets/work/phd-preview.png
+assets/images/personal/marathon.JPG
+assets/images/personal/Daf.png
+assets/images/personal/glacier_national_park.jpeg
 ```
 
 Additional folders: `education`, `conferences`, `awards`, and `outreach` under `assets/images/`.
@@ -55,3 +60,13 @@ This repository is private during development and review. Do not make it public,
 Upload the contents of this folder to a GitHub repository. In Settings → Pages, choose deployment from a branch, select your branch and `/ (root)`, and save. For a personal root-domain site, use your `USERNAME.github.io` repository; this site also works in a regular project repository. No deployment has been performed by this build.
 
 Design reference supplied by the owner: https://mehradans92.github.io/ . No text or images copied from that site.
+
+Work assets: `assets/work/BMS.png` is the internship graphic; `assets/work/phd.pdf` is the research overview poster. These were copied from the supplied files in `assets/images/work/`; the originals are retained.
+
+The research poster preview is a static PNG exported from `assets/work/phd.pdf`; update both files together if the poster changes. The preview and “View Research Poster” button open the PDF in a new tab; no PDF viewer is embedded. Both work entries use matching figure-left/text-right layouts and stack on mobile. Empty certificate template entries are hidden while the Certificates & Training heading remains.
+
+Leadership & Outreach: edit the three arrays in `leadership`. Dates accept a string or an array of date ranges. Optional `institution`, `description`, and `linkedin` fields stay hidden when empty. `group` labels the Student Mentoring entries. `leadershipGallery` holds the independent outreach images and editable hover `caption` labels (initially based on the provided filenames); captions also appear on keyboard focus and remain visible on touch/mobile. Remove an image entry or clear its path to omit it.
+
+Certificates & Training uses compact entries in `certificates`: `title`, `provider`, `description`, optional `date`, `url`, `linkLabel`, and `relatedLinks`. The micro-credential’s `courses` array contains plain-text titles, empty editable `url` fields for individual credentials, and optional `relatedLinks` objects (`label`, `url`). Empty URLs render no button; unlinked course titles remain plain text.
+
+Certificate gallery: `certificateGallery` holds the independent certificate images and editable overlay captions. FEP+ supports separate `linkedin` / `linkedinLabel` and `url` / `linkLabel` fields.
