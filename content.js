@@ -9,7 +9,7 @@ window.SITE_CONTENT = {
   "profile": {
     "name": "Kosar Rahimi",
     "title": "Ph.D. Candidate in Chemical Engineering, University of Houston",
-    "bio": "I study complex biomolecular systems at atomistic resolution, where a single predicted structure is often not enough to explain their behavior.",
+    "bio": "I simulate unseen biomolecular states and use those insights to guide protein design.",
     "image": "assets/images/profile/profile.jpeg",
     "imageAlt": "Portrait of Kosar Rahimi",
     "links": {
